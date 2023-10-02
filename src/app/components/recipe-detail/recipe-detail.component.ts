@@ -13,14 +13,14 @@ import { Recipe } from 'src/app/model/recipe';
 })
 export class RecipesDetailComponent implements OnInit {
   recipeDetail?: Recipe;
-  
+
   constructor(private dataServ: DataService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('sticazzi');
 
     if (id) {
-      this.dataServ.getRecipe(id).subscribe(recipe => console.log(recipe));
+      this.dataServ.getRecipe(id).subscribe(recipe => this.recipeDetail = recipe);
     }
   }
 }
