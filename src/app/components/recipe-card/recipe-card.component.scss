@@ -1,0 +1,25 @@
+.recipe-card {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.card-image {
+    object-fit: cover;
+    object-position: center center;
+    height: 360px;
+}
+
+.card-title {
+    color: white;
+    padding: 0px !important;
+    font-size: large;
+}
+
+.card-subtitle {
+    padding: 0px !important;
+}
+
+.spacer{
+    flex: 1;
+}

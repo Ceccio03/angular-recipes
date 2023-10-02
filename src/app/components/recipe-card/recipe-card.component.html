@@ -1,0 +1,16 @@
+<mat-card *ngIf="recipe" class="recipe-card">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"></div>
+      <mat-card-title class="card-title">{{recipe.name}}</mat-card-title>
+      <mat-card-subtitle class="card-subtitle">{{recipe.createdAt}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image class="card-image" src="{{recipe.url}}">
+    <mat-card-content>
+    </mat-card-content>
+    <mat-card-actions>
+    <div class="spacer"></div>
+    <button mat-button (click)="select()">
+        <mat-icon>open_in_new</mat-icon>
+    </button>
+    </mat-card-actions>
+</mat-card>

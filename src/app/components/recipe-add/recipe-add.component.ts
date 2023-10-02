@@ -15,6 +15,7 @@ export class RecipesAddComponent {
 
   submitRecipe() {
     console.log('mi hai premuto');
+    
     const newRecipe: Recipe = {
       name:'cacio e pepe',
       createdAt: Date.now(),
@@ -28,6 +29,6 @@ export class RecipesAddComponent {
       category: 1,
       url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Spaghetti_cacio_e_pepe_%28creamy_as_it_should_be%29.jpg/1280px-Spaghetti_cacio_e_pepe_%28creamy_as_it_should_be%29.jpg'
     }
-    this.dataServ.postRecipe(newRecipe);
+    this.dataServ.postRecipe(newRecipe).subscribe(addedRecipe => console.log(addedRecipe));
   }
 }
