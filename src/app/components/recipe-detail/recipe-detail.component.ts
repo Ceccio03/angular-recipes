@@ -5,13 +5,21 @@ import { ActivatedRoute } from '@angular/router';
 import { Recipe } from 'src/app/model/recipe';
 import { CategoryToStringPipe } from "../../pipes/category-to-string.pipe";
 import { ToHumanDatePipe } from "../../pipes/to-human-date.pipe";
+import { MatButtonModule } from '@angular/material/button';
+import { SuperButtonModule } from '../super-button/super-button.module';
 
 @Component({
     selector: 'app-recipes-detail',
     standalone: true,
     templateUrl: './recipe-detail.component.html',
     styleUrls: ['./recipe-detail.component.scss'],
-    imports: [CommonModule, CategoryToStringPipe, ToHumanDatePipe]
+    imports: [
+      CommonModule,
+      CategoryToStringPipe,
+      ToHumanDatePipe,
+      MatButtonModule,
+      SuperButtonModule
+    ]
 })
 export class RecipesDetailComponent implements OnInit {
   recipe?: Recipe;

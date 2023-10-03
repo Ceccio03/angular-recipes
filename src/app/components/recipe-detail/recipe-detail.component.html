@@ -1,11 +1,12 @@
 <div class="detail-container" *ngIf="recipe">
   <img class="detail-img" src="{{recipe.url}}" alt="">
   <span class="detail-name">{{recipe.name}}</span>
-  <h2>Ingredients: </h2>
+  <h2>Ingredienti: </h2>
   <span class="detail-text" *ngFor="let ingredient of recipe.ingredients">{{ingredient}}</span>
-  <h2>Description: </h2>
+  <h2>Descrizione: </h2>
   <span class="detail-text">{{recipe.description}}</span>
-  <h3>Category: </h3>
+  <h3>Categoria: </h3>
   <span class="detail-text">{{recipe.category | categoryToString}}</span>
   <span class="detail-text">{{recipe.createdAt | toHumanDate}}</span>
+  <button mat-button (click)="deleteRecipe()">Elimina ricetta</button>
 </div>
