@@ -1,7 +1,8 @@
 <div *ngIf="recipeDetail">
-    <h1>{{recipeDetail.name}}</h1>
-    <div *ngIf="recipeDetail.description && recipeDetail.description.length > 0">
-      <strong>description: </strong>
-      <span>{{recipeDetail.description[0]}}</span>
-    </div>
+  <img class="detail-image" src="{{recipeDetail.url}}" alt="">
+  <h1>{{recipeDetail.name}}</h1>
+  <strong>Description: </strong>
+  <span>{{recipeDetail.description}}</span>
+  <strong>Ingredients: </strong>
+  <span>{{recipeDetail.ingredients}}</span>
 </div>

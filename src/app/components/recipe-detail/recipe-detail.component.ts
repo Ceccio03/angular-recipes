@@ -17,7 +17,7 @@ export class RecipesDetailComponent implements OnInit {
   constructor(private dataServ: DataService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('sticazzi');
+    const id = this.route.snapshot.paramMap.get('id');
 
     if (id) {
       this.dataServ.getRecipe(id).subscribe(recipe => this.recipeDetail = recipe);

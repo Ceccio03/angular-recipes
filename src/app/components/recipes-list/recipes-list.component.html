@@ -1,3 +1,5 @@
-<div class="card-container">
-    <app-recipe-card *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-card>
-</div>
+<mat-grid-list cols="4">
+    <mat-grid-tile *ngFor="let rec of recipes">
+      <app-recipe-card [recipe]="rec"></app-recipe-card>
+    </mat-grid-tile>
+</mat-grid-list>
