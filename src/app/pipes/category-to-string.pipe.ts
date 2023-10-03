@@ -7,7 +7,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CategoryToStringPipe implements PipeTransform {
 
   transform(value: number): string {
-    return null;
+    const categoryStrings = [
+      'antipasto',
+      'primo',
+      'secondo',
+      'contorno',
+      'dessert',
+      'cocktail'
+    ]
+    return categoryStrings[value];
   }
 
 }

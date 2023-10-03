@@ -1,4 +1,19 @@
-.detail-image {
-    width: 450px;
-    height: 350px;
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detial-image {
+    max-height: 40vh;
+    object-fit: cover;
+}
+
+.detail-name {
+    font-weight: bold;
+    font-size: 5vh;
+}
+
+.detail-text {
+    font-size: x-large;
 }

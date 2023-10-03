@@ -1,8 +1,11 @@
-<div *ngIf="recipeDetail">
-  <img class="detail-image" src="{{recipeDetail.url}}" alt="">
-  <h1>{{recipeDetail.name}}</h1>
-  <strong>Description: </strong>
-  <span>{{recipeDetail.description}}</span>
-  <strong>Ingredients: </strong>
-  <span>{{recipeDetail.ingredients}}</span>
+<div class="detail-container" *ngIf="recipe">
+  <img class="detail-img" src="{{recipe.url}}" alt="">
+  <span class="detail-name">{{recipe.name}}</span>
+  <h2>Ingredients: </h2>
+  <span class="detail-text" *ngFor="let ingredient of recipe.ingredients">{{ingredient}}</span>
+  <h2>Description: </h2>
+  <span class="detail-text">{{recipe.description}}</span>
+  <h3>Category: </h3>
+  <span class="detail-text">{{recipe.category | categoryToString}}</span>
+  <span class="detail-text">{{recipe.createdAt | toHumanDate}}</span>
 </div>

@@ -5,25 +5,22 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
+import { CategoryToStringPipe } from "src/app/pipes/category-to-string.pipe";
 
 @Component({
-  selector: 'app-recipe-card',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatIconModule,
-    MatButtonModule,
-    RouterModule
-  ],
-  templateUrl: './recipe-card.component.html',
-  styleUrls: ['./recipe-card.component.scss']
+    selector: 'app-recipe-card',
+    standalone: true,
+    templateUrl: './recipe-card.component.html',
+    styleUrls: ['./recipe-card.component.scss'],
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatIconModule,
+        MatButtonModule,
+        RouterModule,
+        CategoryToStringPipe
+    ]
 })
 export class RecipeCardComponent {
   @Input() recipe?: Recipe;
-  @Output() recipeSelected = new EventEmitter<Recipe>()
-
-  select(){
-    this.recipeSelected.emit(this.recipe);
-  }
 }
