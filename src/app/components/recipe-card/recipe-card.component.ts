@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { CategoryToStringPipe } from "src/app/pipes/category-to-string.pipe";
+import { HighlightDirective } from 'src/app/directives/highlight.directive';
 
 @Component({
     selector: 'app-recipe-card',
@@ -18,9 +19,13 @@ import { CategoryToStringPipe } from "src/app/pipes/category-to-string.pipe";
         MatIconModule,
         MatButtonModule,
         RouterModule,
-        CategoryToStringPipe
+        CategoryToStringPipe,
+        HighlightDirective
     ]
 })
 export class RecipeCardComponent {
   @Input() recipe?: Recipe;
+
+  bColor = 'yellow';
+  color = 'black'
 }
