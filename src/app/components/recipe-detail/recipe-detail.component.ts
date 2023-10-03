@@ -7,6 +7,7 @@ import { CategoryToStringPipe } from "../../pipes/category-to-string.pipe";
 import { ToHumanDatePipe } from "../../pipes/to-human-date.pipe";
 import { MatButtonModule } from '@angular/material/button';
 import { SuperButtonModule } from '../super-button/super-button.module';
+import { SuperButtonDirective } from 'src/app/directives/super-button.directive';
 
 @Component({
     selector: 'app-recipes-detail',
@@ -18,7 +19,8 @@ import { SuperButtonModule } from '../super-button/super-button.module';
       CategoryToStringPipe,
       ToHumanDatePipe,
       MatButtonModule,
-      SuperButtonModule
+      SuperButtonModule,
+      SuperButtonDirective
     ]
 })
 export class RecipesDetailComponent implements OnInit {

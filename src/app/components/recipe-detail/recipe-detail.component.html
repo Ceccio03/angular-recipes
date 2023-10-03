@@ -8,5 +8,7 @@
   <h3>Categoria: </h3>
   <span class="detail-text">{{recipe.category | categoryToString}}</span>
   <span class="detail-text">{{recipe.createdAt | toHumanDate}}</span>
-  <button mat-button (click)="deleteRecipe()">Elimina ricetta</button>
+  <!-- <button mat-button (click)="deleteRecipe()">Elimina ricetta</button> -->
+  <!-- <app-super-button></app-super-button> -->
+  <button appSuperButton>Elimina ricetta</button>
 </div>

@@ -12,7 +12,7 @@ import { SuperButtonComponent } from './super-button.component';
     CommonModule
   ],
   exports: [
-    SuperButtonModule
+    SuperButtonComponent
   ]
 })
 export class SuperButtonModule { }
