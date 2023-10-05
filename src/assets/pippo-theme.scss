@@ -1,0 +1,105 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$pippo-green: (
+    50 : #e4ffe0,
+    100 : #baffb3,
+    200 : #8dff80,
+    300 : #5fff4d,
+    400 : #3cff26,
+    500 : #1aff00,
+    600 : #17ff00,
+    700 : #13ff00,
+    800 : #0fff00,
+    900 : #08ff00,
+    A100 : #ffffff,
+    A200 : #f2fff2,
+    A400 : #c0ffbf,
+    A700 : #a6ffa6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$pippo-orange: (
+    50 : #fff0e0,
+    100 : #ffdab3,
+    200 : #ffc180,
+    300 : #ffa84d,
+    400 : #ff9526,
+    500 : #ff8200,
+    600 : #ff7a00,
+    700 : #ff6f00,
+    800 : #ff6500,
+    900 : #ff5200,
+    A100 : #ffffff,
+    A200 : #fff6f2,
+    A400 : #ffd0bf,
+    A700 : #ffbda6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$pippo-indaco: mat.$indigo-palette;
+
+
+$pippo-primary: mat.define-palette($pippo-indaco, 500);
+$pippo-accent: mat.define-palette($pippo-green, 500);
+$pippo-warn: mat.define-palette($pippo-orange);
+
+
+$pippo-theme: mat.define-light-theme((
+ color: (
+   primary: $pippo-primary,
+   accent: $pippo-accent,
+   warn: $pippo-warn,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+$pippo-dark-theme: mat.define-dark-theme((
+ color: (
+   primary: $pippo-accent,
+   accent: $pippo-primary,
+   warn: $pippo-warn,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.all-component-themes($pippo-theme);
+
+.pippo-dark{
+  @include mat.all-component-themes($pippo-dark-theme);
+  background-color: #414141;
+  color: white;
+}

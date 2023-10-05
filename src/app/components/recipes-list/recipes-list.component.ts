@@ -32,10 +32,12 @@ export class RecipesListComponent implements OnInit {
   constructor(private dataServ: DataService, private commService: CommunicationService) {}
 
   ngOnInit(): void {
-    this.dataServ.getAllRecipes().subscribe(recs => {
-      this.recipes = recs;
-      console.log(this.recipes);      
-    });
+    // this.dataServ.getAllRecipes().subscribe(recs => {
+    //   this.allRecipes = recs;
+    //   this.recipes = recs;
+    //   console.log(this.recipes);     
+    // });
+    this.dataServ.getAllRecipes.subscribe(recs => this.recipes = recs);
     console.log(DishType);
 
     this.commService.selectedCategory.subscribe(cat => {

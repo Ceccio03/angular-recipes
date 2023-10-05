@@ -4,8 +4,19 @@
     </button>
     <span>Angular Recipes</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
+    <mat-form-field>
+      <mat-label>Filtra per categoria</mat-label>
+      <mat-select [(value)]="selectedCategory" (valueChange)="categoryChanged()">
+        <mat-option value="-1">
+          tutti
+        </mat-option>
+        <mat-option value="{{el[1]}}" *ngFor="let el of categories">
+          {{el[0]}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button (click)="toggleTheme()" mat-icon-button>
+      <mat-icon>dark_mode</mat-icon>
     </button>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>share</mat-icon>

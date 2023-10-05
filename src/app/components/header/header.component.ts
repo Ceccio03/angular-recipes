@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 import { DishType } from 'src/app/model/recipe';
 import { CommunicationService } from 'src/app/services/communication.service';
 
@@ -13,7 +15,9 @@ import { CommunicationService } from 'src/app/services/communication.service';
     CommonModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
@@ -21,7 +25,7 @@ import { CommunicationService } from 'src/app/services/communication.service';
 export class HeaderComponent {
   selectedCategory: string = '-1';
 
-  @Output() catChanged = new EventEmitter<number>();
+  // @Output() catChanged = new EventEmitter<number>();
 
   categories = Object.entries(DishType).slice(Object.entries(DishType).length/2);
 
