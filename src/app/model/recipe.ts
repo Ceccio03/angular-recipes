@@ -7,3 +7,12 @@ export interface Recipe {
     category: number
     id?: string
 }
+
+export enum DishType {
+    antipasto,
+    primo,
+    secondo,
+    contorno,
+    dessert,
+    cocktail
+  }

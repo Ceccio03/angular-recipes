@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-recipes';
+  category = -1;
+
+  categoryChange(cat: number) {
+    this.category = cat;
+  }
 }

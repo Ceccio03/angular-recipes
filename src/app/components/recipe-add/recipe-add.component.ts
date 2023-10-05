@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DataService } from 'src/app/service/data.service';
+import { DataService } from 'src/app/services/data.service';
 import { Recipe } from 'src/app/model/recipe';
 import { FormsModule } from '@angular/forms';
 

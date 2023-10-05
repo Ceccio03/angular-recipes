@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DataService } from 'src/app/service/data.service';
+import { DataService } from 'src/app/services/data.service';
 import { ActivatedRoute } from '@angular/router';
 import { Recipe } from 'src/app/model/recipe';
 import { CategoryToStringPipe } from "../../pipes/category-to-string.pipe";
